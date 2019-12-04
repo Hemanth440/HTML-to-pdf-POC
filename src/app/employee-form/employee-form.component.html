@@ -1,0 +1,8 @@
+<div>
+    <form *ngIf="!loading" [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+        <template #formContainer></template>
+        <div class="form-group">
+            <button class="btn btn-primary">Register</button>
+        </div>
+    </form>
+</div>

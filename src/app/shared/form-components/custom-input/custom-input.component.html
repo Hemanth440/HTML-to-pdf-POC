@@ -1,0 +1,10 @@
+<div class="form-group">
+    <div>submitted: {{submitted}}</div>
+    <label>{{data.label}}</label>
+    <input type="text" formControlName="{{data.name}}" class="form-control" [ngClass]="{ 'is-invalid': submitted && formControls[data.name].errors }" />
+    <div *ngIf="submitted && formControls[data.name].errors" class="invalid-feedback">
+        <div *ngIf="formControls[data.name].errors.required">{{data.validation.empty}}</div>
+        <div *ngIf="formControls[data.name].errors.maxlength">{{data.validation.maxlength.message}}</div>
+        <div *ngIf="formControls[data.name].errors.minlength">{{data.validation.minlength.message}}</div>
+    </div>
+</div>

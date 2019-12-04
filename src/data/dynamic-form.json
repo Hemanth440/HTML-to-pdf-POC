@@ -1,0 +1,95 @@
+[
+    {
+        "type": "input",
+        "inputType": "text",
+        "priority": 1,
+        "payload": {
+            "placeholder": "Please enter firstname",
+            "label": "Please enter firstname",
+            "name": "firstname",
+            "value": "",
+            "validation": {
+                "empty": "Please enter firstname",
+                "maxlength": {
+                    "value": 100,
+                    "message": "Firstname should not be more than 100 charaters"
+                }
+            }
+        }        
+    },
+    {
+        "type": "input",
+        "inputType": "text",
+        "priority": 2,
+        "payload": {
+            "placeholder": "Please enter lastname",
+            "label": "Please enter lastname",
+            "name": "lastname",
+            "value": "",
+            "validation": {
+                "empty": "Please enter lastname",
+                "maxlength": {
+                    "value": 100,
+                    "message": "Lastname should not be more than 100 charaters"
+                }
+            }
+        }
+    },
+    {
+        "type": "input",
+        "inputType": "text",
+        "priority": 3,
+        "payload": {
+            "placeholder": "Please enter employee id",
+            "label": "Please enter employee id",
+            "name": "employeeId",
+            "value": "",
+            "validation": {
+                "empty": "Please enter employeeId",
+                "maxlength": {
+                    "value": 6,
+                    "message": "EmployeeId should 6 charaters"
+                },
+                "minlength": {
+                    "value": 6,
+                    "message": "EmployeeId should 6 charaters"
+                }
+            }
+        }
+    },
+    {
+        "type": "select",
+        "priority": 4,
+        "payload": {
+            "placeholder": "Please select department",
+            "label": "Please select department",
+            "name": "department",
+            "value": "",
+            "options": [
+                {
+                    "label": "Finance",
+                    "value": "finance"
+                },
+                {
+                    "label": "Technology",
+                    "value": "technology"
+                },
+                {
+                    "label": "Office Services",
+                    "value": "OfficeServices"
+                }
+            ],
+            "validation": {
+                "empty": "Please select department"
+            }
+        }
+    },
+    {
+        "type": "button",
+        "priority": 5,
+        "payload": {
+            "label": "Please select department",
+            "name": "submit"            
+        }
+    }
+]

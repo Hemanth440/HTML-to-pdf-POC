@@ -1,0 +1,14 @@
+<div class="form-group">
+    <label>{{data.label}}</label>
+    <select  
+        formControlName="{{data.name}}"
+        class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && formControls[data.name].errors }"
+        [(ngModel)]="data.value"
+    >
+        <option *ngFor="let option of data.options" [ngValue]="option.value">{{option.label}}</option>
+    </select>
+    <div *ngIf="submitted && formControls[data.name].errors" class="invalid-feedback">
+        <div *ngIf="formControls[data.name].errors.required">{{data.validation.empty}}</div>        
+    </div>
+</div>
